@@ -1,6 +1,6 @@
-import { get_images } from "/filereader.js"
-import { RNG } from "/rng.js"
-import { animator } from "/animate.js"
+import { get_images } from "./filereader.js"
+import { RNG } from "./rng.js"
+import { animator } from "./animate.js"
 
 const WIDTH = document.body.offsetWidth;
 const HEIGHT = document.body.offsetHeight;
