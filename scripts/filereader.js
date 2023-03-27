@@ -1,4 +1,4 @@
-const FOLDER = "./imgs/"
+const FOLDER = "../imgs/"
 
 let images = []
 
