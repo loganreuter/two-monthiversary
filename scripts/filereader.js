@@ -1,4 +1,5 @@
-const FOLDER = "./imgs/"
+// const FOLDER = "./imgs/"
+const FOLDER = "https://api.github.com/repos/lreuter2020/two-monthiversary/contents/imgs"
 
 let images = []
 
