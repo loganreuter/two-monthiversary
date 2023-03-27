@@ -8,7 +8,7 @@ export const get_images = new Promise((resolve, reject) => {
         .then((res) => res.json())
         .then((data) => {
             for(let img of data){
-                if(img.title.match(/\.(jpe?g|png)$/i)){
+                if(img.name.match(/\.(jpe?g|png)$/i)){
                     images.push(img.html_url)
                 }
             }
