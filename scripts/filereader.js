@@ -9,13 +9,16 @@ export const get_images = new Promise((resolve, reject) => {
     xhr.responseType = "document";
     xhr.onload = () => {
         if(xhr.status == 200){
-            for(let img of xhr.response.getElementsByTagName("a")){
-                // console.log(img, img.title, img.title.match(/\.(jpe?g|png)$/i))
-                if(img.title.match(/\.(jpe?g|png)$/i)){
-                    images.push(img.href)
+            xhr.response.json().then((res) => {
+                for(let img of xhr.response){
+                    // console.log(img, img.title, img.title.match(/\.(jpe?g|png)$/i))
+                    if(img.name.match(/\.(jpe?g|png)$/i)){
+                        // images.push(img.href)
+                        images.push(img.html_url)
+                    }
                 }
-            }
-            resolve(images)
+                resolve(images)
+            })
         } else {
             reject("Failed to get images")
         }
